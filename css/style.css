@@ -18,6 +18,12 @@ body {
     /* Sets the line-height to 1.6 */
   }
   
+  .page-footer1 {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
 .page-header__item {
     width: 25px;
 }
@@ -109,16 +115,31 @@ button:hover, button:focus {
 .profile_portrait {
   float: left;
   width: 250px;
+  height: 250px;         
   margin-right: 40px;
-  border-radius: 30%;
+  border-radius: 50%;    
+  object-fit: cover;     
 }
 
 .about {
   max-width: 700px;
   margin: 0 auto;
+  text-align: center;
 }
 
-.page-footer {
+.about ul{
+  list-style-type: none;
+  text-align: center;
+  padding-left: 0;
+}
+
+.about .button {
+  display: inline-block;
+  margin: 1rem auto 0;
+}
+
+
+.page-footer, .page-footer1{
   clear: both;
   display: flex;
   flex-direction: column;
@@ -139,6 +160,7 @@ button:hover, button:focus {
   transition: transform 0.2s ease;
   overflow: hidden;
   border-radius: 8px;
+  margin: 10px;
 }
 
 .grid__item:hover {
@@ -166,6 +188,14 @@ button:hover, button:focus {
 
 #se_logo {
   border-radius: 75%;
+  max-width: 100px; /* limits the max width to 150px */
+  height: auto;     /* keeps the aspect ratio */
+  display: block; 
+}
+
+#work {
+  text-align: center;
+  margin: 2rem auto;
 }
 
 .button, button {
@@ -223,6 +253,67 @@ button:focus,
 .cloud-front {
   animation: 30s cloud-move infinite alternate linear;
 }
+
+.contact-container {
+  max-width: 600px;      /* Limit the width so it's not too wide */
+  margin: 2rem auto;     /* Center horizontally with auto side margins and some vertical spacing */
+  padding: 0 1rem;       /* Some side padding on small screens */
+  text-align: center;    /* Center text and inline elements */
+}
+
+#contact-form label,
+#contact-form input,
+#contact-form textarea {
+  display: block;        /* Stack labels and inputs */
+  margin: 0.5rem auto;   /* Center with margin and add spacing */
+  max-width: 100%;       /* Make sure inputs don't overflow container */
+}
+
+#contact-form input[type="email"],
+#contact-form input[type="tel"],
+#contact-form textarea {
+  width: 100%;           /* Inputs and textarea fill container width */
+  max-width: 400px;      /* Max width for readability */
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+#contact-form input[type="submit"] {
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+#contact-form input[type="submit"]:hover {
+  background-color: #2c6a62; /* Slightly darker shade */
+}
+
+.contact h2 {
+  margin-top: 2rem;
+}
+
+.contact p,
+.contact a {
+  margin: 0.3rem 0;
+  display: block;
+}
+
+.contact a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.contact a:hover,
+.contact a:focus {
+  text-decoration: underline;
+}
+
 
 @keyframes cloud-move-reverse {
   from {
