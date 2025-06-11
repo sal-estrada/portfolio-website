@@ -314,6 +314,9 @@ button:focus,
   text-decoration: underline;
 }
 
+.social-media a {
+  text-decoration: none;
+}
 
 @keyframes cloud-move-reverse {
   from {

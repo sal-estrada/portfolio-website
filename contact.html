@@ -34,38 +34,36 @@
        </header>
 <div class="contact-container">
   <h1 id="contact">Contact</h1>
-  <form action="send-form" method="post" id="contact-form">
+  <form action="https://formsubmit.co/salvadorangelestrada@outlook.com" method="post" id="contact-form">
       <label class="standard-label" for="contact-email">E-mail:* </label>
-      <input type="email" id="contact-email">
+      <input type="email" id="contact-email" name="email" required>
       <br>
       <label class="standard-label" for="contact-telephone">Telephone: </label>
-      <input type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" id="contact-telephone">
+      <input type="tel" id="contact-telephone" name="telephone" pattern="\d{3}[\-]\d{3}[\-]\d{4}">
       <br>
       <label class="standard-label" for="contact-message">Message:* </label>
-      <textarea maxlength="240" required id="contact-message"></textarea>
+      <textarea name="message" maxlength="240" required id="contact-message"></textarea>
+      <!-- Honeypot field (spam trap) -->
+      <input type="text" name="_honey" style="display:none">
+      <!-- Optional: Disable FormSubmit's CAPTCHA (not shown anyway) -->
+      <!-- <input type="hidden" name="_captcha" value="false"> -->
+      <!-- Optional: Redirect after submission -->
+      <!-- <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html"> -->
       <input type="submit" value="Send message">
   </form>
-  <div class="contact">
-      <h2>CareerFoundry GmbH</h2>
-      <p>c/o Factory Görlitzer Park</p>
-      <p>Lohmühlenstraße 65</p>
-      <p>12435 Berlin</p>
-      <p>Deutschland</p>
-      <br>
-      <a href="tel:+493048492016">Tel: +49 30 4849 2016</a>
-      <br>
-      <a href="mailto:office@careerfoundry.com">Email: office@careerfoundry.com</a>
-      <br>
-      <a href="mailto:office@careerfoundry.com">Contact me</a>
-  </div>
 </div>
-
-    <footer class="page-footer">
+    <footer class="page-footer1">
       <p>Find me on</p>
       <div class="social-media">
-       <img width="30" height="30" src="img/github_icon.svg" alt="Github">
-       <img width="30" height="30" src="img/x.svg" alt="X">
-       <img width="30" height="30" src="img/linkedin_logo_icon.svg" alt="LinkedIn">
+         <a href="https://github.com/sal-estrada" target="_blank">
+            <img width="30" height="30" src="img/github_icon.svg" alt="Github">
+         </a>
+         <a href="https://x.com/" target="_blank">
+            <img width="30" height="30" src="img/x.svg" alt="X">
+         </a>
+         <a href="https://www.linkedin.com/in/salvador-estrada-69b00228a/" target="_blank">
+            <img width="30" height="30" src="img/linkedin_logo_icon.svg" alt="LinkedIn">
+         </a>
       </div>
   </footer>
     <script src="js/tota11y.min.js"></script>
